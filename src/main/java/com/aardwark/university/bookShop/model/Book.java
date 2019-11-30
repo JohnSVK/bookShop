@@ -1,20 +1,47 @@
 package com.aardwark.university.bookShop.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 public class Book {
 
     @Id
-    @GeneratedValue
-    private long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private String name;
     private String description;
     private Date datePublished;
+
+    @ManyToOne
+    @JoinColumn
+    private Author author;
+
+    @ManyToOne
+    @JoinColumn
+    private BookCategory bookCategory;
+
+    @ManyToOne
+    @JoinColumn
+    private BookType bookType;
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
+    public BookCategory getBookCategory() {
+        return bookCategory;
+    }
+
+    public void setBookCategory(BookCategory bookCategory) {
+        this.bookCategory = bookCategory;
+    }
 
     public long getId() {
         return id;
