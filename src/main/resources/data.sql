@@ -1,0 +1,1 @@
+/*insert into book (name, description) values ('Allatra', 'Allatra book');*/
