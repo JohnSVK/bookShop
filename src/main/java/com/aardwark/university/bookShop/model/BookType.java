@@ -1,5 +1,7 @@
 package com.aardwark.university.bookShop.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -16,6 +18,7 @@ public class BookType {
     private String name;
     private String description;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "bookType")
     private Set<Book> books;
 

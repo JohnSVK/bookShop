@@ -1,5 +1,7 @@
 package com.aardwark.university.bookShop.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -14,6 +16,7 @@ public class Author {
     private String surname;
     private String country;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "author")
     private Set<Book> books;
 

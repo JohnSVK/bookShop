@@ -1,5 +1,7 @@
 package com.aardwark.university.bookShop.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
@@ -26,6 +28,18 @@ public class Book {
     @ManyToOne
     @JoinColumn
     private BookType bookType;
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public BookType getBookType() {
+        return bookType;
+    }
+
+    public void setBookType(BookType bookType) {
+        this.bookType = bookType;
+    }
 
     public Author getAuthor() {
         return author;
