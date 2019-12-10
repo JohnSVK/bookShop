@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class MainController {
 
     @Autowired
@@ -27,5 +29,16 @@ public class MainController {
     @GetMapping(path = "/books")
     public Iterable<Book> getAllBooks(){
         return bookRepository.findAll();
+    }
+
+    @GetMapping(path = "/books/{id}")
+    public ResponseEntity<Book> getBookById(@PathVariable long id){
+        Optional<Book> foundBook = bookRepository.findById(id);
+
+        if(foundBook.isPresent()){
+            return ResponseEntity.ok().body(foundBook.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 }

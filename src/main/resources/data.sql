@@ -19,4 +19,16 @@ ALTER TABLE book MODIFY COLUMN id BIGINT(20) NOT NULL AUTO_INCREMENT ;
 insert into book (name, description, author_id, book_category_id, book_type_id)
     values ('Allatra', 'Kniha, ktorá zmení svet.', 1, 1, 1);
 insert into book (name, description, author_id, book_category_id, book_type_id)
+    values ('Sensei zo Šambaly I', 'Kniha, ktorá zmení svet.', 1, 1, 1);
+insert into book (name, description, author_id, book_category_id, book_type_id)
+    values ('Sensei zo Šambaly II', 'Kniha, ktorá zmení svet.', 1, 1, 1);
+insert into book (name, description, author_id, book_category_id, book_type_id)
+    values ('Sensei zo Šambaly III', 'Kniha, ktorá zmení svet.', 1, 1, 1);
+insert into book (name, description, author_id, book_category_id, book_type_id)
+    values ('Sensei zo Šambaly IV', 'Kniha, ktorá zmení svet.', 1, 1, 1);
+insert into book (name, description, author_id, book_category_id, book_type_id)
+    values ('Pán prsteňov I.- Spoločenstvo prsteňa', 'Prvý slovenský preklad prvej časti slávnej trilógie.', 2, 2, 2);
+insert into book (name, description, author_id, book_category_id, book_type_id)
+    values ('Pán prsteňov II.- Dve veže', 'Prvý slovenský preklad druhej časti slávnej trilógie.', 2, 2, 2);
+insert into book (name, description, author_id, book_category_id, book_type_id)
     values ('Pán prsteňov III.- Návrat kráľa', 'Prvý slovenský preklad tretej časti slávnej trilógie.', 2, 2, 2);
