@@ -20,12 +20,12 @@ public class Author {
     @OneToMany(mappedBy = "author")
     private Set<Book> books;
 
-    public Set<Book> getBooks() {
-        return books;
+    public Long getId() {
+        return id;
     }
 
-    public void setBooks(Set<Book> books) {
-        this.books = books;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -50,5 +50,13 @@ public class Author {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public Set<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(Set<Book> books) {
+        this.books = books;
     }
 }
