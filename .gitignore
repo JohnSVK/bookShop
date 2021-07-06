@@ -1,0 +1,4 @@
+/src/main/resources/public/
+/.idea/
+/bookShop.iml
+/src/main/webapp/bookShopAngular/node_modules
